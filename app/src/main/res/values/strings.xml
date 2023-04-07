@@ -2,4 +2,6 @@
     <string name="app_name">Cara ou Coroa?</string>
     <string name="play_button">Jogar</string>
     <string name="winner_title">Vencedor</string>
+    <string name="coin_front_name">Cara</string>
+    <string name="coin_back_name">Coroa</string>
 </resources>
