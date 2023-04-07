@@ -4,7 +4,9 @@
     <dimen name="winner_title_text_size">25sp</dimen>
     <dimen name="winner_text_size">23sp</dimen>
     <dimen name="play_button_text_size">18sp</dimen>
-    <dimen name="play_button_layout_height">60dp</dimen>
+    <dimen name="play_button_layout_height">75dp</dimen>
     <dimen name="play_button_layout_padding_start">25dp</dimen>
     <dimen name="play_button_layout_padding_end">25dp</dimen>
+    <dimen name="play_button_layout_margin_end">16dp</dimen>
+    <dimen name="play_button_layout_margin_start">16dp</dimen>
 </resources>

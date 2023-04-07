@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
             type="br.com.arthurjf.caraoucoroa.viewmodel.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".viewmodel.MainActivity">
@@ -33,10 +35,10 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="92dp"
+            android:src="@{viewmodel.isCoinFrontSided() ? @drawable/cara : @drawable/coroa}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-            android:src="@{viewmodel.isCoinFrontSided() ? @drawable/cara : @drawable/coroa}"/>
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
         <TextView
             android:id="@+id/txtWinnerTitle"
@@ -64,16 +66,19 @@
 
         <Button
             android:id="@+id/btnPlay"
-            android:layout_width="wrap_content"
+            style="@style/Button"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/play_button_layout_height"
+            android:layout_marginStart="@dimen/play_button_layout_margin_start"
             android:layout_marginTop="76dp"
+            android:layout_marginEnd="@dimen/play_button_layout_margin_end"
+            android:onClick="@{() -> viewmodel.playCoin()}"
             android:paddingStart="@dimen/play_button_layout_padding_start"
             android:paddingEnd="@dimen/play_button_layout_padding_end"
             android:text="@string/play_button"
             android:textSize="@dimen/play_button_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtWinner"
-            android:onClick="@{() -> viewmodel.playCoin()}"/>
+            app:layout_constraintTop_toBottomOf="@+id/txtWinner" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
